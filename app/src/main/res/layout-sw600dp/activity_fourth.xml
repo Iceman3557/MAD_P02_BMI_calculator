@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthActivity">
+
+    <TextView
+        android:id="@+id/valBMI_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="90dp"
+        android:text="***"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_text"
+        tools:layout_editor_absoluteX="461dp" />
+
+    <TextView
+        android:id="@+id/heightFinal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Your height is: *** UNITS "
+        app:layout_constraintBottom_toTopOf="@+id/BMI_text"
+        app:layout_constraintTop_toBottomOf="@+id/weightFinal_text"
+        tools:layout_editor_absoluteX="401dp" />
+
+    <TextView
+        android:id="@+id/BMI_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Your BMI"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/valBMI_text"
+        app:layout_constraintTop_toBottomOf="@+id/heightFinal_text"
+        tools:layout_editor_absoluteX="437dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#050505"
+        android:ems="15"
+        android:foregroundTint="#000000"
+        android:shadowColor="#00F10000"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valBMI_text"
+        tools:layout_editor_absoluteX="357dp" />
+
+    <TextView
+        android:id="@+id/weightFinal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Your weight is: *** UNITS "
+        app:layout_constraintBottom_toTopOf="@+id/heightFinal_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:layout_editor_absoluteX="401dp" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle_button"
+        android:text="-"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@+id/plus_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle_button"
+        android:text="+"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="@+id/minus_button" />
+
+</android.support.constraint.ConstraintLayout>

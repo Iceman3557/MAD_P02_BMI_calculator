@@ -4,39 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/age_text"
+        android:id="@+id/prefered_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you at least 20 years old?"
+        android:text="Your prefered System?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <Button
-        android:id="@+id/yes_button"
+        android:id="@+id/metric_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Yes"
-        app:layout_constraintEnd_toStartOf="@+id/no_button"
+        android:text="Metric"
+        app:layout_constraintEnd_toStartOf="@+id/imperial_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_text" />
+        app:layout_constraintTop_toBottomOf="@+id/prefered_text" />
 
     <Button
-        android:id="@+id/no_button"
+        android:id="@+id/imperial_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No"
+        android:text="Imperial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/yes_button"
-        app:layout_constraintTop_toTopOf="@+id/yes_button" />
-
+        app:layout_constraintStart_toEndOf="@+id/metric_button"
+        app:layout_constraintTop_toTopOf="@+id/metric_button" />
 </android.support.constraint.ConstraintLayout>
