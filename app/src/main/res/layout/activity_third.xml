@@ -7,13 +7,13 @@
     tools:context=".Third_Activity">
 
     <EditText
-        android:id="@+id/editTextNumberSigned2"
+        android:id="@+id/heightAns_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/next_button"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned"
+        app:layout_constraintStart_toStartOf="@+id/weightAns_text"
         app:layout_constraintTop_toBottomOf="@+id/height_text" />
 
     <TextView
@@ -21,28 +21,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="unit"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned2"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumberSigned2" />
+        app:layout_constraintBottom_toBottomOf="@+id/heightAns_text"
+        app:layout_constraintStart_toEndOf="@+id/heightAns_text" />
 
     <TextView
         android:id="@+id/height_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Height?"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/heightAns_text"
+        app:layout_constraintEnd_toEndOf="@+id/weightAns_text"
         app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+        app:layout_constraintStart_toStartOf="@+id/weightAns_text"
+        app:layout_constraintTop_toBottomOf="@+id/weightAns_text" />
 
     <SeekBar
         android:id="@+id/height_seek"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned2"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned2" />
+        app:layout_constraintBottom_toTopOf="@+id/heightAns_text"
+        app:layout_constraintEnd_toEndOf="@+id/heightAns_text"
+        app:layout_constraintStart_toStartOf="@+id/heightAns_text" />
 
     <TextView
         android:id="@+id/selected_text"
@@ -61,16 +61,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned" />
+        app:layout_constraintBottom_toTopOf="@+id/weightAns_text"
+        app:layout_constraintEnd_toEndOf="@+id/weightAns_text"
+        app:layout_constraintStart_toStartOf="@+id/weightAns_text" />
 
     <TextView
         android:id="@+id/weight_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Weight?"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/weightAns_text"
         app:layout_constraintEnd_toEndOf="@+id/selected_text"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/selected_text"
@@ -81,11 +81,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="unit"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberSigned"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumberSigned" />
+        app:layout_constraintBottom_toBottomOf="@+id/weightAns_text"
+        app:layout_constraintStart_toEndOf="@+id/weightAns_text" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
+        android:id="@+id/weightAns_text"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -103,9 +103,18 @@
         android:layout_height="wrap_content"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberSigned2"
+        app:layout_constraintEnd_toEndOf="@+id/heightAns_text"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned2" />
+        app:layout_constraintStart_toStartOf="@+id/heightAns_text"
+        app:layout_constraintTop_toBottomOf="@+id/heightAns_text" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        app:layout_constraintTop_toBottomOf="@+id/next_button"
+        tools:layout_editor_absoluteX="1dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

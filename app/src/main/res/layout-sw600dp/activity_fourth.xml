@@ -13,7 +13,7 @@
         android:layout_marginBottom="90dp"
         android:text="***"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/info"
         app:layout_constraintTop_toBottomOf="@+id/BMI_text"
         tools:layout_editor_absoluteX="461dp" />
 
@@ -39,7 +39,7 @@
         tools:layout_editor_absoluteX="437dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#050505"
@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toStartOf="@+id/plus_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/info" />
 
     <Button
         android:id="@+id/plus_button"
