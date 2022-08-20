@@ -9,13 +9,14 @@
     <TextView
         android:id="@+id/valBMI_text"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="90dp"
         android:text="***"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/info"
-        app:layout_constraintTop_toBottomOf="@+id/BMI_text"
-        tools:layout_editor_absoluteX="461dp" />
+        app:layout_constraintEnd_toEndOf="@+id/BMI_text"
+        app:layout_constraintStart_toStartOf="@+id/BMI_text"
+        app:layout_constraintTop_toBottomOf="@+id/BMI_text" />
 
     <TextView
         android:id="@+id/heightFinal_text"
@@ -24,8 +25,9 @@
         android:layout_marginBottom="60dp"
         android:text="Your height is: *** UNITS "
         app:layout_constraintBottom_toTopOf="@+id/BMI_text"
-        app:layout_constraintTop_toBottomOf="@+id/weightFinal_text"
-        tools:layout_editor_absoluteX="401dp" />
+        app:layout_constraintEnd_toEndOf="@+id/weightFinal_text"
+        app:layout_constraintStart_toStartOf="@+id/weightFinal_text"
+        app:layout_constraintTop_toBottomOf="@+id/weightFinal_text" />
 
     <TextView
         android:id="@+id/BMI_text"
@@ -35,8 +37,9 @@
         android:text="Your BMI"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/valBMI_text"
-        app:layout_constraintTop_toBottomOf="@+id/heightFinal_text"
-        tools:layout_editor_absoluteX="437dp" />
+        app:layout_constraintEnd_toEndOf="@+id/heightFinal_text"
+        app:layout_constraintStart_toStartOf="@+id/heightFinal_text"
+        app:layout_constraintTop_toBottomOf="@+id/heightFinal_text" />
 
     <TextView
         android:id="@+id/info"
@@ -50,8 +53,9 @@
         android:textColor="#FFFFFF"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valBMI_text"
-        tools:layout_editor_absoluteX="357dp" />
+        app:layout_constraintEnd_toEndOf="@+id/valBMI_text"
+        app:layout_constraintStart_toStartOf="@+id/valBMI_text"
+        app:layout_constraintTop_toBottomOf="@+id/valBMI_text" />
 
     <TextView
         android:id="@+id/weightFinal_text"
@@ -60,10 +64,11 @@
         android:layout_marginBottom="8dp"
         android:text="Your weight is: *** UNITS "
         app:layout_constraintBottom_toTopOf="@+id/heightFinal_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.24000001"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:layout_editor_absoluteX="401dp" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/minus_button"

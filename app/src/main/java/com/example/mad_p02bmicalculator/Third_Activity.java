@@ -6,6 +6,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,10 +35,16 @@ public class Third_Activity extends AppCompatActivity {
         SeekBar w_seek = (SeekBar) findViewById(R.id.weight_seek);
         SeekBar h_seek = (SeekBar) findViewById(R.id.height_seek);
 
-        w_seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        w_seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 updateWeightAns(i);
+            }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
 
@@ -45,6 +52,12 @@ public class Third_Activity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 updateHeightAns(i);
+            }
+
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
 
@@ -70,13 +83,17 @@ public class Third_Activity extends AppCompatActivity {
         SeekBar w_seek = (SeekBar) findViewById(R.id.weight_seek);
         SeekBar h_seek = (SeekBar) findViewById(R.id.height_seek);
 
+
+
         Intent systemIntent = getIntent();
         int sys = systemIntent.getIntExtra("system",0);
+        Log.d("system check",Integer.toString(sys));
+
         if (sys == 1){
             prompt.setText("You have selected Imperial System");
 
-            int temp = WEIGHT_MAX*2.2;
-            int temp2 = (int) HEIGHT_MAX/2.54;
+            int temp = (int) WEIGHT_MAX* (int)2.2;
+            int temp2 = (int) HEIGHT_MAX/ (int)2.54;
             w_unit.setText("Lb");
             w_seek.setMax(temp);
             h_unit.setText("Inch");
@@ -88,7 +105,7 @@ public class Third_Activity extends AppCompatActivity {
             w_unit.setText("Kg");
             w_seek.setMax(WEIGHT_MAX);
             h_unit.setText("Cm");
-            h_unit.setText(HEIGHT_MAX);
+            h_seek.setMax(HEIGHT_MAX);
         }
         return sys;
     }
@@ -112,7 +129,7 @@ public class Third_Activity extends AppCompatActivity {
         double weight = Double.parseDouble(weightAns.getText().toString());
         double height = Double.parseDouble(heightAns.getText().toString());
 
-        if (sys = 0) {
+        if (sys == 0) {
             if (weight > WEIGHT_MAX || weight < 0) {
                 Snackbar.make(bot, "The weight is outside the specifications", Snackbar.LENGTH_SHORT)
                         .show();

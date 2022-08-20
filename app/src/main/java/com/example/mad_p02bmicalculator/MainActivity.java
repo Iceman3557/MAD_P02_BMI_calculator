@@ -18,9 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button no = (Button) findViewById(R.id.no_button);
         Button yes = (Button) findViewById(R.id.yes_button);
-        Snackbar.make(no,"Please come back when you are older",Snackbar.LENGTH_SHORT)
-        .show();
 
+
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(no,"Please come back when you are older",Snackbar.LENGTH_SHORT)
+                        .show();
+            }
+        });
 
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
